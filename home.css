@@ -73,7 +73,6 @@ nav{
     width: 100%;
     margin: 5% 0;
     display: flex;
-
     justify-content: space-between;
 }
 .Ibox1{
@@ -109,25 +108,35 @@ nav{
     width: 350px;
 }
 .MLC{
-    height: 700px;
+    height: auto;
+    /* min-height: 650px; */
     padding: 0 10%;
+    padding-bottom: 5%;
     width: 80%;
     /* border: 2px solid red; */
 }
 .MLCBT{ /* it means mlc big text */
-    font-size: 36px;
+    font-size: 2rem;
     font-weight: 800;
 }
 .MLCContentBox{
-    height: 550px;
+    /* min-height: 430px; */
     width: 100%;
     display: flex;
+    /* border: 2px solid red; */
 }
+
 .MLCbox1{
     display: flex;
     background-color: transparent;
-    height: 100%;
-    flex: 35%;
+    height: auto;
+    flex: 20%;
+    justify-content: center;
+    align-items: center;
+}
+.MLCbox1 img{
+    height: 430px;
+    display: flex;
 }
 .MLCbox2{
     display: flex;
@@ -140,7 +149,6 @@ nav{
 .grid-container {
     height: auto;
     width: 100%;
-    height: auto;
     display: grid;
     grid-template-columns: auto auto auto;
     background-color: transparent;
@@ -148,7 +156,6 @@ nav{
 .grid-item {
     background-color: transparent;
     margin: 5px;
-    font-size: 30px;
     display: flex;
     height: auto;
     width: auto;
@@ -177,13 +184,14 @@ nav{
 .textBox{
     display: flex;
     background-color: white;
+    word-wrap: break-word;
 }
 .textBox p{
-    font-size: 24px;
+    font-size: 1.3rem;
     font-weight: bold;
 }
 .LOP{
-    padding: 0 10%;
+    padding: 3% 10%;
     width: 80%;
     height: auto;
     background-color: #F5F5F5;
@@ -636,4 +644,17 @@ img {vertical-align: middle;}
   
 .NavLi > a:hover{
     color: darkorange;
+}
+
+
+@media screen and (max-width: 1100px) {
+    /* .MLCContentBox{
+        flex-direction: column-reverse;
+    } */
+    /* .MLC{
+        background-color: red;
+    } */
+    .grid-container {
+        grid-template-columns: auto auto;
+    }
 }
