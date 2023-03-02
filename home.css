@@ -215,6 +215,7 @@ nav{
     padding: 10px;
     width: 170px;
     height: 55px;
+    cursor: pointer;
 }
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -228,11 +229,14 @@ nav{
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-.card img {
+.card > img {
     object-fit: contain;
-    height: auto;
-    width: auto;
+    /* height: auto;
+    width: auto; */
     background-color: transparent;
+    width: 100%;
+    height: auto;
+    padding: 0;
 }
 .cardContentBox{
     height: auto;
