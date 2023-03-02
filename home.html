@@ -11,16 +11,16 @@
   </head>
   <body>
     
-    <section class="landing">
+    <section class="landing" id="landing">
         <!-- Navigation -->    
         <div class="bg-div">
           <img class="logo-img" src="/images/logo 1.png" ALT="align box" ALIGN=CENTER>
           <nav>
               <ul class="landUl">
-                  <li class="landLi"><a href="#">Home</a></li>
-                  <li class="landLi"><a href="#">LandLord</a></li>
-                  <li class="landLi"><a href="#">Tenants</a></li>
-                  <li class="landLi"><a href="#">Contact Us</a></li>
+                  <li class="landLi"><a href="#landing" data-after="landing">Home</a></li>
+                  <li class="landLi"><a href="#LOP" data-after="MLC">LandLord</a></li>
+                  <li class="landLi"><a href="#Property">Tenants</a></li>
+                  <li class="landLi"><a href="#footer">Contact Us</a></li>
               </ul>
           </nav>
         </div>
@@ -40,7 +40,7 @@
         </div>
     </section>
 
-    <section class="MLC">
+    <section class="MLC" id="MLC">
       <p class="MLCBT"><span style="border-bottom: 2px solid red;">Minimum Living Cost</span> Takes Care Of Everything</p>
       <div class="MLCContentBox">
         <div class="MLCbox1">
@@ -122,7 +122,7 @@
 
 
 
-    <section class="LOP">
+    <section class="LOP" id="LOP">
       <div class="LOPtopCont">
         <span class="MLCBT"><span style="border-bottom: 2px solid red;">List</span> Of Properties</span>
         <button class="ViewPropertyBtn">View All Property</button>
@@ -293,7 +293,7 @@
       </div>
     </section>
 
-    <section class="Flexibility">
+    <section class="Flexibility" id="Flexibility">
       <div class="Flexibox1">
         <div class="imgBox1">
             <img src="/images/unsplash_nEtpvJjnPVo.png">
@@ -372,12 +372,21 @@
             </select>
             </div>
 
-              <div class="fullwidth">
+              <div class="Dfullwidth">
                 <p><label for="desc">Description</label></p>
               <textarea placeholder="Enter Description" rows="10"></textarea>
               </div>
 
-              <input type="file" class="fullwidth" name="UploadPhotos" rows= "10" placeholder="Drag your images here, or browse">
+              <label for="fullwidth">Upload Photos</label>
+
+              <input type="file" class="fullwidth" id="fullwidth" name="UploadPhotos" rows= "10" placeholder="Drag your images here, or browse"/>
+              <label class="fullwidthLabel" for="fullwidth">
+                Drag your images here, 
+                <span style="color: orangered;">or browse</span> 
+                <span style="color: gray; font-weight: normal; display: block;">Supported: JPG,JPEG, PNG</span>
+              </label>
+
+
               <button class="submit">Add New Property</button>
       
           </form>
@@ -470,7 +479,7 @@
       </div>
     </section>
 
-    <section class="footer">
+    <section class="footer" id="footer">
       <div class="fbox1"> 
         <!-- <h1 style="font-size:55px;">Logo</h1>  -->
         <div class="flogoBox">

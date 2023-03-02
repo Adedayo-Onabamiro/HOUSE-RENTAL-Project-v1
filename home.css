@@ -1,6 +1,7 @@
 html,body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+    scroll-behavior: smooth;
  }
 
 .landing{
@@ -415,9 +416,16 @@ nav{
     grid-gap: 30px;
     margin: 5% 10%;
 }
-.fullwidth {
+.Dfullwidth {
     grid-column: span 3;
     min-height: 200px;
+}
+.fullwidth {
+    grid-column: span 3;
+    /* min-height: 200px; */
+    border: 2px dotted orangered;
+    background-color: transparent;
+    height: 100px;
 }
 .submit {
     grid-column: 2;
@@ -443,8 +451,9 @@ input{
 textarea{
     padding: auto;
     min-height: 80px;
-    width: auto;
+    width: 100%;
     resize: vertical;
+    grid-column: span 3;
     background-color: #E6E6E6;
     border: 2px solid #d8d7d7;
     border-radius: 5px;  
@@ -458,6 +467,34 @@ input, select, option {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+}
+/* random code to make sure the file type input has a proper label inside */
+/* 
+label {
+  display: inline-block;
+  width: 5em;
+  padding: 0 1em;
+  text-align: right;
+} */
+
+/* Hide the file input using
+opacity */
+.fullwidth {
+    position: absolute;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.fullwidth + .fullwidthLabel {
+  text-align: center;
+  cursor: pointer;
+  border: 2px dotted orangered;
+  background-color: transparent;
+  padding: 30px;
+  border-radius: 3px;
+}
+.fullwidthLabel{
+    grid-column: span 3;
 }
 /*END OF FORM BOX*/
 
@@ -701,9 +738,11 @@ img {vertical-align: middle;}
     .form{
         grid-template-columns: auto auto;
     }
-    .fullwidth {
+    .Dfullwidth, .fullwidth, .submit{
         grid-column: span 2;
-        min-height: 200px;
+    }
+    .fullwidthLabel{
+        grid-column: span 2;
     }
     .Bottom{
         flex-direction: column;
