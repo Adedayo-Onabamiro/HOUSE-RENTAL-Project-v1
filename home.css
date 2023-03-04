@@ -2,8 +2,9 @@ html,body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     scroll-behavior: smooth;
- }
 
+ }
+ 
 .landing{
     background-image: url(/images/etienne-beauregard-riverin-B0aCvAVSX8E-unsplash.png);
     height: 800px;
@@ -17,6 +18,7 @@ html,body{
 }
  /*Header section*/
 /* Navigation */
+
 .bg-div{
     background:transparent;
     overflow: hidden;
@@ -48,17 +50,13 @@ nav{
     align-items: center;
     align-self:center ;
     display: none;
-    /* display: inline-block; */
     border: 3px solid white;
     border-radius: 50%;
-    /* position: relative; */
-    /* display: flex; */
     align-items: center;
     justify-content: center;
     z-index: 100;
     cursor: pointer;
     transform: scale(.8);
-    /* margin-right: 20px; */
 }
  .hamburger:after{
     position: absolute;
@@ -103,6 +101,7 @@ nav{
 .landUl{
     margin: 0;
     padding: 0;
+
 }
 .landLi{
     display: inline-block;
@@ -144,15 +143,17 @@ nav{
 }
  /*END OF Nav*/
 .introBox{
-    height: 500px;
+    /* border: 2px solid red; */
+    /* max-height: 500px; */
+    height: 65%;
     width: 100%;
     margin: 5% 0;
     display: flex;
     justify-content: space-between;
 }
 .Ibox1{
-    height: 100%;
-    width: 45%;
+    height: auto;
+    flex: 45%;
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -170,8 +171,8 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: 45%;
+    height: auto;
+    flex: 45%;
     background-color: transparent;
 }
 .Ibox2 img{
@@ -179,8 +180,13 @@ nav{
     justify-content: center;
     justify-self: center;
     object-fit: cover;
-    height: 400px;
-    width: 350px;
+    height: auto;
+    width: 60%;
+    /* height: 100%;
+    width: 100%;
+    max-height: 400px;
+    max-width: 350px; */
+
 }
 .MLC{
     height: auto;
@@ -193,6 +199,9 @@ nav{
 .MLCBT{ /* it means mlc big text */
     font-size: 2rem;
     font-weight: 800;
+}
+.MLCBT span{
+    border-bottom: 2px solid orangered;
 }
 .MLCContentBox{
     /* min-height: 430px; */
@@ -272,13 +281,13 @@ nav{
     background-color: #F5F5F5;
 }
 .LOPtopCont{
-    height: 60px;
+    min-height: 60px;
     width: 98%;
-    margin-bottom: 5%;
-    padding: 0 2%;
+    padding: 0% 2%;
     background-color: transparent;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 .ViewPropertyBtn{
@@ -287,9 +296,26 @@ nav{
     border: none;
     color: white;
     padding: 10px;
-    width: 170px;
+    max-width: 170px;
     height: 55px;
     cursor: pointer;
+    margin: 2% 0;
+}
+.LOPgrid-container {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: transparent;
+}
+.LOPgrid-item {
+    background-color: transparent;
+    margin: 5px;
+    display: flex;
+    height: auto;
+    width: auto;
+    justify-content: center;
+    flex-direction: column;
 }
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -577,16 +603,17 @@ opacity */
 /*END OF FORM BOX*/
 
 .Comments{
-    height: 500px;
+    height: 65%;
+    /* height: 500px; */
     width: 100%;
     /* border: 2px solid rebeccapurple; */
     flex-direction: row;
     display: flex;
-    margin: 5% 0;
+    margin: 10% 0;
 }
 .Cbox1{
-    height: 100%;
-    width: 65%;
+    height: auto;
+    flex: 65%;
     background-color: #F4511E12;
     display: flex;
     flex-direction: column;
@@ -594,14 +621,15 @@ opacity */
     justify-content: center;
 }
 .Cbox2{
-    height: 100%;
-    width: 35%;
+    height:auto;
+    flex: 35%;
     background-color: transparent;
     padding: 0;
 
 }
 .Cbox2 img{
-    height: 100%;
+    height: auto;
+    min-height: 500px;
     width: 100%;
     object-fit: cover;
 }
@@ -718,7 +746,8 @@ img {vertical-align: middle;}
   }
 
 .footer{
-    height: 400px;
+    height: 80%;
+    min-height: 400px;
     width: 80%;
     border-top: 3px solid orangered;
     margin: 5% 10%;
@@ -728,7 +757,7 @@ img {vertical-align: middle;}
     justify-content: space-between;
 }
 .fbox1{
-    height: 100%;
+    height: auto;
     flex: 20%;
     background-color: transparent;
     display: flex;
@@ -751,7 +780,7 @@ img {vertical-align: middle;}
     height: 50px;
 }
 .fbox2{
-    height: 100%;
+    height: auto;
     flex: 45%;
     background-color: transparent;
     display: flex;
@@ -770,7 +799,9 @@ img {vertical-align: middle;}
     padding: 0px 5px;
 }
 .Bottom{
-    height: 70px;
+
+    height: 80%;
+    min-height: 70px;
     width: 80%;
     padding-bottom: 2%;
     border-top: 1px solid #7BB9FC;
@@ -804,7 +835,13 @@ img {vertical-align: middle;}
 
 /* tablet responsive code */
 @media screen and (max-width: 1100px) {
+    .Ibox1 p{
+        font-size: 2rem;
+    }
     .grid-container {
+        grid-template-columns: auto auto;
+    }
+    .LOPgrid-container {
         grid-template-columns: auto auto;
     }
     .Flexibox2{
@@ -839,72 +876,158 @@ img {vertical-align: middle;}
     }
     
     .hamburger{
-        /* height: 40px;
-        width: 40px;
-        display: inline-block;
-        border: 3px solid white;
-        border-radius: 50%; */
-        /* position: relative; */
         display: flex;
-        /* align-items: center; */
-        /* justify-content: center; */
         z-index: 100;
         cursor: pointer;
-        /* transform: scale(.8); */
-        /* margin-right: 20px; */
     }
-    /* .nav-bar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    max-width: 1300px;
-    padding: 0 10px;
-} */
- nav .landUl{
-    list-style: none;
-    position: absolute;
-    background-color: black;
-    width: 100%;
-    height: 100vh;
-    left: 100%;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    overflow-x: hidden;
-    transition: .5s ease left;
+    nav .landUl{
+        list-style: none;
+        position: absolute;
+        background-color: black;
+        width: 100%;
+        height: 100vh;
+        left: -100%;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        overflow-x: hidden;
+        transition: .5s ease left;
+    }
+    nav .landUl.active{
+        left: 0;
+    }
+    nav .landUl a{
+        font-size: 1.5rem;
+        font-weight: 500;
+        letter-spacing: .2rem;
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        padding: 20px;
+        display: block;
+    }
+    nav .landUl a::after{
+        content: attr(data-after);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        color: orangered;
+        opacity: 30%;
+        font-size: 10rem;
+        letter-spacing: 50px;
+        z-index: -1;
+        transition: .3s ease letter-spacing;
+    }
+    nav .landUl .landLi:hover a::after{
+        transform: translate(-50%, -50%) scale(1);
+        letter-spacing: initial;
+    }
+    .landLi::after{
+        height: 0px;
+    }
 }
-nav .landUl.active{
-    left: 0;
+
+@media screen and (max-width: 750px) {
+    .introBox{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .Ibox1 p{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .MLCBT{
+        text-align: center;
+        font-size: 1.7rem;
+    }
+    .MLCContentBox{
+        flex-direction: column;
+    }
+    .MLCbox1{
+        display: none;
+    }
+    .MLCbox2{
+        justify-content: center;
+        align-items: center;
+    }
+    .grid-container {
+        grid-template-columns: auto auto; 
+    }
+    .LOPgrid-container {
+        grid-template-columns: auto auto;
+    }
+    .LOPtopCont{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .Flexibility{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .Flexibox2{
+        width: 100%;
+        text-align: center;
+    }
+    .Pp{
+        text-align: center;
+    }
+    .form{
+        grid-template-columns: auto;
+    }
+    .Dfullwidth, .fullwidth, .submit{
+        grid-column: span 1;
+    }
+    .fullwidthLabel{
+        grid-column: span 1;
+    }
+    .Comments{
+        flex-direction: column;
+    }
+    .footer{
+        flex-direction: column;
+    }
+    .Bottom{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5%;
+        align-self: center;
+        justify-self: center;
+        align-content: center;
+        justify-content: center;
+    }
+    .BNavUL, .BNavLi{
+        display: block;
+    }
+    .Bottom span{
+        text-align: center;
+    }
+
+
+
 }
-nav .landUl a{
-    font-size: 1.5rem;
-    font-weight: 500;
-    letter-spacing: .2rem;
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    padding: 20px;
-    display: block;
- }
- nav .landUl a::after{
-    content: attr(data-after);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    color: orangered;
-    font-size: 10rem;
-    letter-spacing: 50px;
-    z-index: -1;
-    transition: .3s ease letter-spacing;
+@media screen and (max-width: 600px){
+    .LOPgrid-container{
+        grid-template-columns:auto ;
+    }
+        .Flexibox1{
+        display: none;
+    }
 }
- nav .landUl .landLi:hover a::after{
-    transform: translate(-50%, -50%) scale(1);
-    letter-spacing: initial;
-}
+
+@keyframes hamburger_pulse{
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1.5);
+    }
 }
