@@ -283,16 +283,17 @@
         </div>
       </div>
 
-      <div class="paginationBox">
-        <!-- <img src="../images/Pagination.png"> -->
-        <div class="pagination">
-          <a href="$" style="color: darkgrey;">Prev</a>
-          <a class="active" href="$">1</a>
-          <a href="$">2</a>
-          <a href="$">3</a>
-          <a href="$">Next</a>
+      <div class="paginationBox" id="paginationBox">
+        <div class="pagination" id="pagination">
+          <a href="#paginationBox" class="pbtn" style="color: darkgrey;">Prev</a>
+          <a class="pbtn pactive" href="#paginationBox">1</a>
+          <a href="#paginationBox" class="pbtn">2</a>
+          <a href="#paginationBox" class="pbtn">3</a>
+          <a href="#paginationBox" class="pbtn">Next</a>
         </div>
       </div>
+
+      
     </section>
 
     <section class="Flexibility" id="Flexibility">
@@ -318,7 +319,7 @@
       </div>
     </section>
 
-    <section class="Property">
+    <section class="Property" id="Property">
       <p class="Pp"> Your property with us and be Confident that Your Room will be Filled Out! </p>
       <div class="formBox">
           <h1 style="color: #F4511E; text-align: center; font-size: 30px;">Add A New Property</h1>
@@ -326,7 +327,7 @@
           <form action="" class="form">
 
             <div class="Box">
-              <label for="">Name</label>
+              <label for="name">Name</label>
               <input type="text" placeholder="Enter Name">
             </div>
 
@@ -344,6 +345,9 @@
               <label for="name">City</label>
               <select name="" id="">
                 <option value="Something">Select City</option>
+                <option value="Something">Oakland</option>
+                <option value="Something">San Jose</option>
+                <option value="Something">Berkerly</option>
               </select>
               </div>
 
@@ -351,6 +355,9 @@
               <label for="name">State</label>
               <select name="" id="">
                 <option value="Something">Select State</option>
+                <option value="Something">Texas</option>
+                <option value="Something">Florida</option>
+                <option value="Something">Ohio</option>
               </select>
               </div>
 
@@ -358,6 +365,9 @@
               <label for="name">Room Type</label>
               <select name="" id="">
                 <option value="Something">Select Room Type</option>
+                <option value="Something">Bedroom</option>
+                <option value="Something">Dining Room</option>
+                <option value="Something">Attic</option>
               </select>
               </div>
 
@@ -371,6 +381,9 @@
               <label for="name">Apartment Type</label>
               <select name="" id="">
                 <option value="Something">Apartment Type</option>
+                <option value="Something">Studio</option>
+                <option value="Something">Alcove Studio</option>
+                <option value="Something">Loft</option>
             </select>
             </div>
 
@@ -434,7 +447,7 @@
                     ac, mattis eu velit. Donec sed risus a lacus fringilla finibus.
               </p>
               <div class= "testimonialContainer">
-                  <img src="../images/Ellipse 4.png" alt="Avatar">
+                  <img src="../images/Ellipse 14.png" alt="Avatar">
                   <div class="TCD">
                     <span style="font-weight: bold; color: darkorange; font-size: 18px;">Jeffery Dahmer</span>
                     <span style="font-size: 16px;">Tenant</span>
@@ -456,7 +469,7 @@
                     ac, mattis eu velit. Donec sed risus a lacus fringilla finibus.
               </p>
               <div class= "testimonialContainer">
-                  <img src="../images/Ellipse 4.png" alt="Avatar">
+                  <img src="../images/Ellipse 15.png" alt="Avatar">
                   <div class="TCD">
                     <span style="font-weight: bold; color: darkorange; font-size: 18px;">Corbin Johnson</span>
                     <span style="font-size: 16px;">Body</span>
@@ -504,7 +517,7 @@
           </span>
         </span>
 
-        <span>
+        <span class="fbox2SMImgs">
           Social Media
           <img src="../images/Facebook.png">
           <img src="../images/Twitter.png">
@@ -520,15 +533,15 @@
 
     <section class="Bottom">
         <ul class="BNavUL">
-            <li class="BNavLi"><a href="../homePage/Home.html"> ABOUT US  </a></li>
-            <li class="BNavLi"><a href="../productPage/productPage.html"> CONTACT US </a> </li>
-            <li class="BNavLi"><a  href="../auctionPage/auctionPage.html">HELP</a> </li>
-            <li class="BNavLi"><a href="../dropPage/dropPage.html">PRIVACY POLICY</a> </li>
-            <li class="BNavLi"><a href="../dropPage/dropPage.html">DISCLAIMER</a> </li>
+            <li class="BNavLi"><a href="#footer"> ABOUT US  </a></li>
+            <li class="BNavLi"><a href="#footer"> CONTACT US </a> </li>
+            <li class="BNavLi"><a  href="#footer">HELP</a> </li>
+            <li class="BNavLi"><a href="#footer">PRIVACY POLICY</a> </li>
+            <li class="BNavLi"><a href="#footer">DISCLAIMER</a> </li>
         </ul>
 
         <span>
-          Copyright © 2020 Minimumlivingcost. All rights reserved
+          Copyright © 2020 DayoBamiro. All rights reserved
         </span>
         
     </section>
