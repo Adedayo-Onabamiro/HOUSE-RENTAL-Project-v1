@@ -4,7 +4,7 @@ html,body{
     scroll-behavior: smooth;
 
  }
- 
+
 .landing{
     background-image: url(/images/etienne-beauregard-riverin-B0aCvAVSX8E-unsplash.png);
     height: 800px;
@@ -410,7 +410,7 @@ nav{
     display: inline-block;
 }
 
-.pagination a {
+.pagination .pbtn {
     color: orangered;
     float: left;
     padding: 8px 16px;
@@ -418,20 +418,24 @@ nav{
     border: 1px solid rgb(169, 166, 166);
 }
 
-.pagination a.active {
+.pagination .pbtn.pactive {
     background-color: orangered;
     color: white;
     border: 1px solid orangered;
 }
 
-.pagination a:hover:not(.active) {background-color: #ddd;}
 
-.pagination a:first-child {
+
+.pagination .pbtn:hover:not(.pactive) {background-color: #ddd;}
+
+
+
+.pagination .pbtn:first-child {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 
-.pagination a:last-child {
+.pagination .pbtn:last-child {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -572,21 +576,11 @@ input, select, option {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
-/* random code to make sure the file type input has a proper label inside */
-/* 
-label {
-  display: inline-block;
-  width: 5em;
-  padding: 0 1em;
-  text-align: right;
-} */
-
-/* Hide the file input using
-opacity */
 .fullwidth {
     position: absolute;
     filter: alpha(opacity=0);
-    opacity: 0;
+    display: none;
+    /* opacity: 0; */
 }
 
 .fullwidth + .fullwidthLabel {
@@ -662,7 +656,9 @@ img {vertical-align: middle;}
     text-align: left;
     
 }
-
+.testimonialContainer img{
+    min-height: 61px;
+}
 .comma {
   color: #f2f2f2;
   font-size: 1px;
@@ -688,7 +684,7 @@ img {vertical-align: middle;}
   margin-bottom: 5%;
 }
 
-.active, .dot:hover {
+.dot.active, .dot:hover {
   background-color: orangered;
 }
 
@@ -797,6 +793,9 @@ img {vertical-align: middle;}
     width: auto;
     object-fit: contain;
     padding: 0px 5px;
+}
+.fbox2SMImgs{
+    cursor:pointer ;
 }
 .Bottom{
 
@@ -1012,7 +1011,7 @@ img {vertical-align: middle;}
 
 
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 650px){
     .LOPgrid-container{
         grid-template-columns:auto ;
     }

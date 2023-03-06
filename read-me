@@ -1,0 +1,10 @@
+This branch was created to correct certain bugs and add new functionalities.
+
+1. Work on the map (needs api key)
+2. make nav links properly work (navigate to other sections in the page)✅
+3. "name" input field does not work properly (works as if its a "file" input type)✅
+4. make pagination do anything when clicked✅
+4.1. add active on pagination pages to make it more real ✅
+5. make social media icons hoverable but immersive✅
+6. make slideshow automatic✅
+7. fix issue of nonscrollable content after clicking item in nav✅
