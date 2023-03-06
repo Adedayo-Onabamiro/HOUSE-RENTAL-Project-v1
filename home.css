@@ -491,6 +491,7 @@ nav{
     height: 55px;
     width: 150px;
     margin: 20px 0;
+    cursor: pointer;
 }
 .Property{
     height: auto;
@@ -544,6 +545,7 @@ nav{
     font-size: large;
     color: white;
     border: none;
+    cursor: pointer;
 }
 .Box{
     display: flex;
