@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Home </title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.26/"></script>
     <link rel="stylesheet" href="../home.css">
 
   </head>
@@ -39,7 +42,39 @@
             </p>
           </div>
           <div class="Ibox2">
-            <img src="../images/Group 1883.png">
+            <!-- <img src="../images/Group 1883.png"> -->
+            <div class="mapDiv">
+            </div>
+            <div class="mapOptions">
+              <div class="mO1">
+                <div class="dropdown">
+                  <button>All Type</button>
+                  <ul>
+                    <li><a href="#">Duplex</a></li>
+                    <li><a href="#">Bungalows</a></li>
+                    <li><a href="#">Detached</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mO2">
+                <div class="dropdown">
+                  <button>Neigborhood</button>
+                  <ul>
+                    <li><a href="#">City</a></li>
+                    <li><a href="#">Suburb</a></li>
+                    <li><a href="#">Urban</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mO3">
+                <div class="dropdown">
+                  <button style="background-color: skyblue;" type="button" >
+                    <i class='fa fa-search' style="color: white; font-size: 1.2rem;"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
     </section>
@@ -547,5 +582,6 @@
     </section>
 
     <script src="../home.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   </body>
 </html>

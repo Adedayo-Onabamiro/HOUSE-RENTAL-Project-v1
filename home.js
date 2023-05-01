@@ -86,3 +86,30 @@ for (var p = 0; p < pbtns.length; p++) {
 }
 //code for pagination active changing end
 
+// //code for map
+// require([
+//   "esri/config", "esri/Map", "esri/views/MapView"],
+//    function(esriConfig, Map, MapView) {
+//     esriConfig.apiKey = "YOUR_API_KEY";
+//     const map = new Map({
+//       basemap: "arcgis-topographic" 
+//       // Basemap layer service
+//     });
+  
+//     const view = new MapView({
+//       map: map,
+//       center: [-118.805, 34.027], // Longitude, latitude
+//       zoom: 13, // Zoom level
+//       container: "viewDiv" // Div element
+//     });
+  
+//    })
+
+// code for dropdown under map
+document.querySelector(".mO1 .dropdown button").addEventListener("click", () => {
+  document.querySelector(".mO1 .dropdown ul").classList.toggle("active");
+})
+
+document.querySelector(".mO2 .dropdown button").addEventListener("click", () => {
+  document.querySelector(".mO2 .dropdown ul").classList.toggle("active");
+})
