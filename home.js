@@ -106,10 +106,10 @@ for (var p = 0; p < pbtns.length; p++) {
 //    })
 
 // code for dropdown under map
-document.querySelector(".mO1 .dropdown button").addEventListener("click", () => {
+document.querySelector(".mO1 .dropdown").addEventListener("click", () => {
   document.querySelector(".mO1 .dropdown ul").classList.toggle("active");
 })
 
-document.querySelector(".mO2 .dropdown button").addEventListener("click", () => {
+document.querySelector(".mO2 .dropdown").addEventListener("click", () => {
   document.querySelector(".mO2 .dropdown ul").classList.toggle("active");
 })

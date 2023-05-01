@@ -177,15 +177,23 @@ nav{
     background-color: transparent;
 }
 .Ibox2 .mapDiv {
-    border: 5px solid white;
-    height: 70%;
+    border: 1px solid white;
+    height: 65%;
     width: 90%;
+    border-radius: 20px;
+}
+.Ibox2 .mapDiv img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
 }
 .Ibox2 .mapOptions{
     display: flex;
     margin-top: 5%;
     height: 15%;
     width: 90%;
+    /* border: 5px solid red; */
 }
 .mapOptions .mO1{
     height: 100%;
@@ -1018,8 +1026,8 @@ img {vertical-align: middle;}
         text-align: center;
         font-size: 2rem;
     }
-    .mapOptions,.dropdown, .mO1, .mO2, .mO3{
-        display: none;
+    .mapOptions .dropdown button{
+        font-size: 1.1rem;
     }
     .MLCBT{
         text-align: center;
@@ -1100,7 +1108,6 @@ img {vertical-align: middle;}
         display: none;
     }
 }
-
 @keyframes hamburger_pulse{
     0%{
         opacity: 1;
