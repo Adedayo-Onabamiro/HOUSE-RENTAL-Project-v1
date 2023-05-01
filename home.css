@@ -150,6 +150,7 @@ nav{
     margin: 5% 0;
     display: flex;
     justify-content: space-between;
+    overflow-x: hidden;
 }
 .Ibox1{
     height: auto;
@@ -175,6 +176,7 @@ nav{
     height: auto;
     flex: 45%;
     background-color: transparent;
+    overflow: hidden;
 }
 .Ibox2 .mapDiv {
     border: 1px solid white;
