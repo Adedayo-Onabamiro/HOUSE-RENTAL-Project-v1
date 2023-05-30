@@ -1,3 +1,101 @@
+//code for gsap animations
+gsap.registerPlugin(ScrollTrigger);
+
+const timeline = gsap.timeline({defaults: {duration: 1}})
+timeline
+  .from(".logo-imgBox", {
+    x: "-50vh"
+  })
+  .from(".navBox", {
+    opacity: 0, stagger: 1
+  })
+  .from(".Ibox1", {
+    x: "-100%",
+    opacity: 0,
+  },1)
+  .from(".Ibox2", {
+    x: "25%",
+    duration: 1.4,
+    opacity: 0,
+  }, 1.5)
+  .from(".grid-item", {
+    scrollTrigger: {
+      trigger: '.MLC', // Element that triggers the animation
+      start: 'top 90%', // Start the animation when the trigger is 80% from the top
+      // end: 'bottom 50%', // End the animation 200 pixels after the start position
+      scrub: true // Enable scrubbing effect
+    },
+    scale: 0.6, 
+    y: 60,
+    yoyo: true, 
+    // repeat: -1, 
+    ease: "power1.inOut",
+    stagger: {
+      amount: 1.5, 
+      grid: "auto",
+      from: "left"
+    }
+  })
+  .from(".imgBox1 img", {
+    scrollTrigger: {
+      trigger: '.Flexibox2 h1', // Element that triggers the animation
+      start: 'top 100%', // Start the animation when the trigger is 80% from the top
+      // end: '+=200', // End the animation 200 pixels after the start position
+      scrub: true // Enable scrubbing effect
+    },
+    scale: .5, 
+    start: "top top",
+    scrub: 1,
+    y: 60,
+    duration: 2,
+    yoyo: true, 
+    // repeat: -1, 
+    ease: "power1.inOut",
+    stagger: {
+      amount: 1.5, 
+      grid: "auto",
+      from: "left"
+    }
+  })
+  .from(".Box", {
+    scrollTrigger: {
+      trigger: '.Box', // Element that triggers the animation
+      start: 'top 50%', // Start the animation when the trigger is 80% from the top
+      // end: '+=200', // End the animation 200 pixels after the start position
+      scrub: true // Enable scrubbing effect
+    },
+    start: "top top",
+    x: -40,
+    yoyo: true, 
+    // repeat: -1, 
+    ease: "power1.inOut",
+    stagger: {
+      amount: 1.5, 
+      grid: "auto",
+      from: "left"
+    }
+  })
+
+  gsap.utils.toArray(".LOPgrid-item").forEach(function(card) {
+    gsap.set(card, {
+      transformStyle: "preserve-3d",
+      transformPerspective: 1000
+    });
+    const q = gsap.utils.selector(card);
+    const front = q(".LOPgrid-item");
+    
+    
+    const tl = gsap.timeline({ paused: true })
+      .to(front, { duration: 1, rotationY: 180 })
+      .to(card, { z: 50 }, 0)
+    card.addEventListener("mouseenter", function() {
+      tl.play();
+    });
+    card.addEventListener("mouseleave", function() {
+      tl.reverse();
+    });
+  });
+//code for gsap animations
 
 // slideshow code starts
 let slideIndex = 0;
@@ -78,72 +176,4 @@ document.querySelector(".mO2 .dropdown").addEventListener("click", () => {
 })
 // code for dropdown under map'
 
-//code for gsap animations
 
-const timeline = gsap.timeline({defaults: {duration: 1}})
-timeline
-  .from(".bg-div", {
-    scrollTrigger: ".bg-div",
-    y:"-100%", ease:"bounce"
-  })
-  .from(".logo-imgBox", {
-    scrollTrigger: ".logo-imgBox",
-    x: "-50vh"
-  })
-  .from(".navBox", {
-    scrollTrigger: ".navBox",
-    opacity: 0, stagger: 1
-  })
-  .from(".Ibox1", {
-    scrollTrigger: ".Ibox1",
-    x: "-100%",
-    opacity: 0
-  },1)
-  .from(".Ibox2", {
-    scrollTrigger: ".Ibox2",
-    x: "100%",
-    opacity: 0
-  },1)
-  .from(".grid-item", {
-    scrollTrigger: ".MLCbox1 img",
-    scale: 0.1, 
-    y: 60,
-    yoyo: true, 
-    // repeat: -1, 
-    ease: "power1.inOut",
-    stagger: {
-      amount: 1.5, 
-      grid: "auto",
-      from: "left"
-    }
-  })
-  .from(".imgBox1 img", {
-    scrollTrigger: ".imgBox1",
-    scale: .5, 
-    start: "top top",
-    scrub: 1,
-    y: 60,
-    duration: 2.5,
-    yoyo: true, 
-    // repeat: -1, 
-    ease: "power1.inOut",
-    stagger: {
-      amount: 1.5, 
-      grid: "auto",
-      from: "left"
-    }
-  })
-  .from(".Box", {
-    scrollTrigger: ".Box",
-    start: "top top",
-    x: -50,
-    yoyo: true, 
-    // repeat: -1, 
-    ease: "power1.inOut",
-    stagger: {
-      amount: 1.5, 
-      grid: "auto",
-      from: "left"
-    }
-  })
-//code for gsap animations
